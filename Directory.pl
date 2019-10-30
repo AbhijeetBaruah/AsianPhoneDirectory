@@ -75,6 +75,23 @@ belong(+998,uzbekistan).
 belong(+84,vietnam).
 belong(+967,yemen).
 
+operator('9888',Op):-
+	Op = "vodafone Punjab".
+operator('9988',Op):-
+	Op = "vodafone Punjab".
+operator('7015',Op):-
+	Op = "jio Haryana".
+operator('7018',Op):-
+	Op = "jio Himachal Pradesh".
+operator('7009',Op):-
+	Op = "jio Punjab".
+operator('8708',Op):-
+	Op = "jio Haryana".
+operator('9878',Op):-
+	Op = "Airtel Punjab".
+operator('9779',Op):-
+	Op = "Airtel Punjab".
+
 phoneNo([X|Y]):-
     number_codes(Z,X),
     belong(Z,C),nl,
