@@ -75,8 +75,14 @@ belong(+998,uzbekistan).
 belong(+84,vietnam).
 belong(+967,yemen).
 
+phoneNo([X|Y]):-
+    number_codes(Z,X),
+    belong(Z,C),nl,
+    format("This number belongs to ~w",C).
+
 main :-
-write("country code"),nl,
-read(X),
-belong(X,Y),nl,
-format("country is ~w",Y).
+    write("number"),nl,
+    read(N),
+    split_string(N," ","",L),
+    write(L),nl,
+    phoneNo(L).
